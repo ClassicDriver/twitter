@@ -5,7 +5,9 @@
  * Twitter API functions
  */
 
-module_load_include('php', 'oauth_common', 'lib/OAuth');
+if (!class_exists('OAuthException')) {
+  module_load_include('php', 'oauth_common', 'lib/OAuth');
+}
 
 /**
  * Connect to the Twitter API.
